@@ -2,6 +2,8 @@
 
 Show all Ironman Suits :)
 
+![alt text](assets/animated.gif "Preview")
+
 ![alt text](assets/preview1.png "Preview")
 
 ![alt text](assets/preview2.png "Preview")

@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/second',
       routes: <String, WidgetBuilder>{
-        '/first': (BuildContext context) => DetailScreen(),
         '/second': (BuildContext context) => SecondScreen(),
   },
     );

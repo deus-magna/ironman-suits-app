@@ -3,7 +3,6 @@ import 'package:custom_painter/models/suit_model.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatefulWidget {
-
   final Suit suit;
 
   const DetailScreen({Key key, @required this.suit}) : super(key: key);
@@ -31,37 +30,39 @@ class _DetailScreenState extends State<DetailScreen> {
               ),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(vertical: 64.0, horizontal: 24),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Align(
-                  alignment: Alignment.topRight,
-                  child: Hero(
-                    tag: '${widget.suit.name}_hero',
-                    child: Image.asset(
-                      widget.suit.imagePath,
-                      scale: 1.3,
+          SingleChildScrollView(
+            child: Container(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 64.0, horizontal: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Hero(
+                      tag: '${widget.suit.name}_hero',
+                      child: Image.asset(
+                        widget.suit.imagePaths[0],
+                        fit: BoxFit.cover,
+                        height: MediaQuery.of(context).size.height * 0.6,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 20),
-                Text(
-                  widget.suit.name,
-                  style: TextStyle(
+                  SizedBox(height: 20),
+                  Text(
+                    widget.suit.name,
+                    style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 28,
+                    ),
                   ),
-                ),
-                Text(
-                  widget.suit.description,
-                  style: TextStyle(
-                      color: Colors.white70,
-                      fontSize: 14),
-                ),
-              ],
+                  Text(
+                    widget.suit.description,
+                    style: TextStyle(color: Colors.white70, fontSize: 14),
+                  ),
+                ],
+              ),
             ),
           ),
           Positioned(
