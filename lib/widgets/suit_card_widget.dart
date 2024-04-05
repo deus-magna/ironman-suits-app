@@ -1,14 +1,13 @@
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:custom_painter/models/suit_model.dart';
-import 'package:custom_painter/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:ironman_suits_app/models/suit_model.dart';
+import 'package:ironman_suits_app/screens/detail_screen.dart';
 
 class SuitCard extends StatelessWidget {
   final Suit suit;
 
   const SuitCard({
-    Key key,
-    @required this.suit,
+    Key? key,
+    required this.suit,
   }) : super(key: key);
 
   @override
@@ -46,37 +45,35 @@ class SuitCard extends StatelessWidget {
           ),
           Positioned(
             bottom: MediaQuery.of(context).size.height * 0.05,
-            child: Container(
-              //color: Colors.green.withAlpha(100),
-              child: Column(
-                children: <Widget>[
-                  Hero(
-                    tag: '${suit.name}_hero',
-                    child: Image.asset(
-                      suit.imagePaths[0],
-                      fit: BoxFit.cover,
-                      height: MediaQuery.of(context).size.height * 0.5,
-                    ),
+            child: Column(
+              children: <Widget>[
+                Hero(
+                  tag: '${suit.name}_hero',
+                  child: Image.asset(
+                    suit.imagePaths[0],
+                    fit: BoxFit.cover,
+                    height: MediaQuery.of(context).size.height * 0.5,
                   ),
-                  Container(
-                    //color: Colors.green.withAlpha(100),
-                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(suit.name,
-                            style: TextStyle(
-                                fontSize: 28,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white)),
-                        Text('Click to read more',
-                            style: TextStyle(fontSize: 14, color: Colors.white))
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                ),
+                Container(
+                  //color: Colors.green.withAlpha(100),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(suit.name,
+                          style: const TextStyle(
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white)),
+                      const Text('Click to read more',
+                          style: TextStyle(fontSize: 14, color: Colors.white))
+                    ],
+                  ),
+                )
+              ],
             ),
           ),
         ],
@@ -88,7 +85,7 @@ class SuitCard extends StatelessWidget {
 class BackgroundClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
-    final roundFactor = 50.0;
+    const roundFactor = 50.0;
 
     final path = Path()
       ..moveTo(0, size.height * 0.33)
