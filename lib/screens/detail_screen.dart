@@ -1,5 +1,5 @@
-import 'package:custom_painter/models/suit_model.dart';
 import 'package:flutter/material.dart';
+import 'package:ironman_suits_app/models/suit_model.dart';
 
 class DetailScreen extends StatefulWidget {
   final Suit suit;
@@ -50,10 +50,10 @@ class _DetailScreenState extends State<DetailScreen> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Text(
                     widget.suit.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                       fontSize: 28,
@@ -61,7 +61,7 @@ class _DetailScreenState extends State<DetailScreen> {
                   ),
                   Text(
                     widget.suit.description,
-                    style: TextStyle(color: Colors.white70, fontSize: 14),
+                    style: const TextStyle(color: Colors.white70, fontSize: 14),
                   ),
                 ],
               ),
@@ -74,7 +74,7 @@ class _DetailScreenState extends State<DetailScreen> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.close,
                 color: Colors.white,
                 size: 32,

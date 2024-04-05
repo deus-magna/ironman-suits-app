@@ -1,9 +1,11 @@
-import 'package:custom_painter/screens/second_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:ironman_suits_app/screens/second_screen.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,14 +13,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: Colors.blue,
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             color: Colors.white,
             elevation: 0,
           ),
           scaffoldBackgroundColor: Colors.white),
       initialRoute: '/second',
       routes: <String, WidgetBuilder>{
-        '/second': (BuildContext context) => SecondScreen(),
+        '/second': (BuildContext context) => const SecondScreen(),
       },
     );
   }
@@ -28,7 +30,7 @@ class CurvesPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Color(0xFF21232A)
+      ..color = const Color(0xFF21232A)
       ..style = PaintingStyle.stroke
       ..strokeWidth = 5
       ..strokeCap = StrokeCap.round;

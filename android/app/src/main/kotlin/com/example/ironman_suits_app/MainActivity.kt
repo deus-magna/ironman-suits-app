@@ -1,4 +1,4 @@
-package com.example.custom_painter
+package com.example.ironman_suits_app
 
 import io.flutter.embedding.android.FlutterActivity
 

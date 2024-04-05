@@ -1,28 +1,24 @@
-import 'package:custom_painter/colors.dart';
-import 'package:custom_painter/data/suits_data.dart';
-import 'package:custom_painter/models/suit_model.dart';
-import 'package:custom_painter/widgets/suit_card_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:ironman_suits_app/data/suits_data.dart';
+import 'package:ironman_suits_app/widgets/suit_card_widget.dart';
 
 class SecondScreen extends StatelessWidget {
- 
+  const SecondScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    
-
     return Scaffold(
       appBar: AppBar(),
       body: Container(
-        padding: EdgeInsets.only(bottom: 30, left: 30, right: 30),
+        padding: const EdgeInsets.only(bottom: 30, left: 30, right: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Text(
+            const Text(
               'IronMan',
               style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
             ),
-            Text('Suits', style: TextStyle(fontSize: 30)),
+            const Text('Suits', style: TextStyle(fontSize: 30)),
             Expanded(
               child: PageView(
                 children: _buildSuits(),
