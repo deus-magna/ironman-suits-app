@@ -1,11 +1,13 @@
-import 'package:custom_painter/colors.dart';
 import 'package:custom_painter/models/suit_model.dart';
 import 'package:flutter/material.dart';
 
 class DetailScreen extends StatefulWidget {
   final Suit suit;
 
-  const DetailScreen({Key key, @required this.suit}) : super(key: key);
+  const DetailScreen({
+    Key? key,
+    required this.suit,
+  }) : super(key: key);
 
   @override
   _DetailScreenState createState() => _DetailScreenState();

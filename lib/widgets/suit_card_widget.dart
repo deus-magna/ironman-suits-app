@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:custom_painter/models/suit_model.dart';
 import 'package:custom_painter/screens/detail_screen.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +6,8 @@ class SuitCard extends StatelessWidget {
   final Suit suit;
 
   const SuitCard({
-    Key key,
-    @required this.suit,
+    Key? key,
+    required this.suit,
   }) : super(key: key);
 
   @override
